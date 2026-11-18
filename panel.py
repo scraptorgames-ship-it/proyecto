@@ -140,6 +140,11 @@ class PanelMixin:
         bar = tk.Frame(parent, bg=BG)
         bar.pack(fill="x", pady=8)
         tk.Label(bar, text="Fecha", bg=BG, fg=NAVY).pack(side="left")
+                # Frida Daniela Morales Entzana: agrego buscador de alumnos para el docente
+        tk.Label(bar, text="Buscar alumno:", bg=BG, fg=NAVY).pack(side="left", padx=(15, 2))
+        buscar_var = tk.StringVar()
+        buscar_entry = tk.Entry(bar, textvariable=buscar_var, width=22, font=("Segoe UI", 10), bg="#254A64", fg="#F6F7F7")
+        buscar_entry.pack(side="left", padx=2)
         fecha_var = tk.StringVar(value=fecha_hoy())
         tk.Entry(bar, textvariable=fecha_var, width=13, font=("Segoe UI", 10),bg="#254A64",fg="#F6F7F7",).pack(side="left", padx=8)
         self.boton(bar, "Cargar lista", lambda: cargar()).pack(side="left", padx=4)
