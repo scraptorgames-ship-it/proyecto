@@ -141,7 +141,10 @@ class PanelMixin:
         bar = tk.Frame(parent, bg=BG)
         bar.pack(fill="x", pady=8)
         tk.Label(bar, text="Fecha", bg=BG, fg=NAVY).pack(side="left")
-                # Frida Daniela Morales Entzana: agrego buscador de alumnos para el docente
+        # Beatriz Adriana Tolentino Teco - fecha automatica
+        fecha_label = tk.Label(bar, text="Hoy: " + fecha_hoy(), bg=BG, fg=NAVY, font=("Segoe UI", 11, "bold"))
+        fecha_label.pack(side="left", padx=10 
+        # Frida Daniela Morales Entzana: agrego buscador de alumnos para el docente
         tk.Label(bar, text="Buscar alumno:", bg=BG, fg=NAVY).pack(side="left", padx=(15, 2))
         buscar_var = tk.StringVar()
         buscar_entry = tk.Entry(bar, textvariable=buscar_var, width=22, font=("Segoe UI", 10), bg="#254A64", fg="#F6F7F7")
@@ -152,7 +155,7 @@ class PanelMixin:
         self.boton(bar, "Todos presentes", lambda: todos_presentes()).pack(side="left", padx=4)
         self.boton(bar, "Guardar asistencia", lambda: guardar(), True).pack(side="right", padx=4)
 
-        columns = ("numero", "nombre", "estado", "justificado", "nota")
+        columns = ("numero", "nombre", "estado", "justificado", "nota" 
         tree = ttk.Treeview(parent, columns=columns, show="headings", height=17, selectmode="browse")
         for col, title, width in [
             ("numero", "N.º", 55), ("nombre", "Alumno", 360), ("estado", "Estado", 125),
