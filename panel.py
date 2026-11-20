@@ -15,7 +15,8 @@ class PanelMixin:
         style.configure("Treeview", background=WHITE, fieldbackground=WHITE,
                         foreground=NAVY, rowheight=29, bordercolor=BORDER,
                         font=("Segoe UI", 10))
-        style.configure("Treeview.Heading", background="#76B7ED", foreground=NAVY,
+           #Frida Daniela Morales Entzana - cambio los colores
+        style.configure("Treeview.Heading", background="#4A90D9", foreground="white",
                         font=("Segoe UI", 10, "bold"), relief="flat")
         style.map("Treeview", background=[("selected", "#58CCE3")], foreground=[("selected", NAVY)])
         
